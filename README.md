@@ -2,26 +2,29 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.0.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Primeira página:
+	menu(hamburguer com telas menores):
+  aplicações, sobre, contato.
+		**Pokemon primeira página página:
+			Background inicial igual para todas as páginas
+			Input com placeholder "Nome do pokemon"
+				botão de excluir a partir do segundo.
+				conforme fica 3 seg sem escrever caso o input esteja preenchido cria o próximo
+		
+			Botão "Verificar"
+		**Pokemon segunda página:
+			somente podendo ser acessado através do botão da primeira página.
+			background específico para o rankeamento.
+			rank no formato de podium.
+			spinner personalizado no formado de um card com estilo desabilitado.
+			animação dos cards partindo da posição do spinner para sua colocação no podium
+			botão de navegação para voltar para página anterior.
+			botão para voltar para o menu
+	footer com créditos.
 
-## Code scaffolding
+Mudança no projeto: sites separados somente com o link, deslocar conteúdo do home para app.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+lembretes:
+criar componentes apps{sites}, about e contact 
+sites: img(thumb, title, link github, description)

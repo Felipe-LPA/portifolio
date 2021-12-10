@@ -1,0 +1,42 @@
+// configurações gerais
+img {
+  width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  width: 90%;
+}
+.body, footer{
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+// classes aninhadas
+.body {
+  // background-color: rgb(207, 126, 245);
+  nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5em;
+    .logo {
+      width: 6em;
+    }
+    ul {
+      display: flex;
+      gap: 1em;
+      li {
+        text-transform: uppercase;
+      }
+    }
+  }
+  article{
+    min-height: 80vh;
+    border: 2px solid rgba(182, 88, 245, 0.2);
+
+  }
+}
