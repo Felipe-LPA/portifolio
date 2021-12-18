@@ -1,4 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~normalize.css';
 @import '~reset.css';
+body{
+  font-family: 'Source Code Pro', monospace;
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
 

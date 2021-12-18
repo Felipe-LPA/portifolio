@@ -4,11 +4,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Em desenvolvimento
 
-	menu(hamburguer com telas menores):
-  aplicações, sobre, contato.
-		
+menu(hamburguer com telas menores):
+aplicações, sobre, contato.
 
-Mudança no projeto: sites separados somente com o link, deslocar conteúdo do home para app.
+ideias para dps:
+background do container será dinamico de acordo com o hover do card do app.
 
 lembretes:
 criar componentes apps{sites}, about e contact 
