@@ -1,7 +1,7 @@
 <nav>
   <div class="container">
     <div class="logo">
-      <a href="#">
+      <a  routerLink="/" >
         <img src="../../assets/img/logo1.png" alt="Logo" />
       </a>
     </div>
@@ -12,14 +12,14 @@
       [icon]="HamburguerMenu()"
     ></fa-icon>
     <ul *ngIf="(breakpoint !== 'sm' && breakpoint !== 'xm') || menuClicked">
-      <li (click)="opt = 'sites'" routerLink="/">
-        <a [ngClass]="opt === 'sites' ? 'active' : ''">Apps</a>
+      <li routerLink="/sites" [routerLinkActive]="'active'">
+        <a >Apps</a>
       </li>
-      <li (click)="opt = 'about'" routerLink="/about">
-        <a [ngClass]="opt === 'about' ? 'active' : ''">Sobre</a>
+      <li  routerLink="/about"  [routerLinkActive]="'active'">
+        <a>Sobre</a>
       </li>
-      <li (click)="opt = 'contact'" routerLink="/contact">
-        <a [ngClass]="opt === 'contact' ? 'active' : ''">Contato</a>
+      <li routerLink="/contact" [routerLinkActive]="'active'">
+        <a >Contato</a>
       </li>
     </ul>
   </div>
@@ -32,6 +32,6 @@
 
 <footer>
   <div class="container">
-    <div class="bottom">&#169; 2021 Copyright: Felipe-LPA</div>
+    <div class="bottom">&#169; 2021 Copyright: Felipe-LPA{{opt}}</div>
   </div>
 </footer>

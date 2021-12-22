@@ -67,6 +67,7 @@ nav {
         display: flex;
         align-items: center;
         font-size: 1em;
+        padding: 2px 0;
         a {
           color: $base-color;
         }
@@ -75,8 +76,9 @@ nav {
         cursor: pointer;
       }
       li:hover a,
-      li a.active {
-        color: #fff;
+      li.active {
+        font-weight: bold;
+        // border-bottom: 2px solid $base-color;
       }
     }
     fa-icon{

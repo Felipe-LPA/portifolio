@@ -1,3 +1,4 @@
+import { SharedService } from './../shared/shared-service.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sharedService:SharedService) { }
 
   ngOnInit(): void {
+    this.sharedService.emitOpt("contact")
   }
 
 }
