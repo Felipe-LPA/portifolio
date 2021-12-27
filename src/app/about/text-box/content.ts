@@ -1,6 +1,6 @@
 export interface Content {
   title: String;
-  bodyText?: String;
+  bodyText?: String[];
   bodyArr?: {
     technologies: subContent[];
     languages: subContent[];
