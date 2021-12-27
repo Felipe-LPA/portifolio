@@ -1,0 +1,52 @@
+@import "~include-media";
+
+$breakpoints: (
+  // xm: 360px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  // xl: 1200px,
+  // xxl: 1400px
+);
+$base-color-alpha: rgba(182, 88, 245, 0.1);
+section#body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vh;
+  padding: 5vh 0;
+  font-size: 0.8rem;
+
+
+  @include media(">=sm") {
+    font-size: 1rem;
+  }
+  @include media(">=md") {
+    font-size: 1.3rem;
+  }
+  @include media(">=lg") {
+    font-size: 1.8rem;
+  }
+
+  div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+    // width: 100%;
+    div.photo-profile {
+      width: 20vw;
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+  div.github-status {
+    width: 100%;
+    @include media(">=md") {
+      width: 70%;
+    }
+  }
+  app-text-box{
+    width: 100%;
+  }
+}

@@ -1,12 +1,12 @@
 @import "~include-media";
 
 $breakpoints: (
-  xm: 360px,
+  // xm: 360px,
   sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
+  // md: 768px,
+  // lg: 992px,
+  // xl: 1200px,
+  // xxl: 1400px
 );
 
 // Variables
@@ -15,10 +15,7 @@ $base-color-alpha: rgba(182, 88, 245, 0.2);
 
 // configurações gerais
 
-img {
-  width: 100%;
-  height: auto;
-}
+
 a {
   text-decoration: none;
 }
@@ -91,9 +88,10 @@ nav {
   }
 }
 main {
-  min-height: 80vh;
   display: flex;
   justify-content: center;
+  margin-bottom: 10vh;
+  background-color: rgba(182, 88, 245, 0.1);
 }
 footer {
   position: absolute;

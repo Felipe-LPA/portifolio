@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~normalize.css';
 @import '~reset.css';
+:root{
+  font-size: 16px;
+}
 body{
   font-family: 'Source Code Pro', monospace;
   width: 100vw;
@@ -13,4 +16,8 @@ body{
 app-root{
   min-height: 100vh;
   position: relative;
+}
+img {
+  width: 100%;
+  height: auto;
 }

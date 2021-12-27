@@ -1,0 +1,9 @@
+<h2>{{content.title}}</h2>
+    <p *ngIf="content.type === 'text'">
+      {{content.bodyText}}
+    </p>
+    <ul *ngIf="content.type === 'arr' && content.bodyArr">
+      <li *ngFor="let item of content.bodyArr.technologies"><span>{{item.name}}</span> <span> {{(item.howMuch | howMuch)}}</span></li>
+      <li *ngFor="let item of content.bodyArr.languages"><span>{{item.name}}</span> <span> {{(item.howMuch | howMuch)}}</span></li>
+    </ul>
+

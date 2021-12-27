@@ -1,14 +1,23 @@
-<section>
-  <div>
-    <div>
-      <img src="assets/img/perfil.jpg" alt="Foto Perfil">
+<section id="body">
+
+  <div class="">
+    <div class="photo-profile">
+      <img src="assets/img/perfil.jpg" alt="Foto Perfil" />
     </div>
-    <h2>Felipe Luiz Pontes de Andradea</h2>
+    <h2>Felipe Luiz Pontes de Andrade</h2>
   </div>
-  <div>
-    <img src="" alt="">
+
+  <app-text-box [content]="summary"></app-text-box>
+
+  <app-text-box [content]="technologies"></app-text-box>
+
+  <div class="github-status">
+    <img
+      src="https://github-readme-stats.vercel.app/api?username=Felipe-LPA&show_icons=true&theme=shades-of-purple&title_color=b362ff"
+      alt=""
+    />
   </div>
-  <article></article>
-  <article></article>
-  <article></article>
+
+
+  <app-text-box [content]="description"></app-text-box>
 </section>
