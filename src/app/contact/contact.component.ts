@@ -1,5 +1,5 @@
-import { SharedService } from './../shared/shared-service.service';
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -8,10 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor(private sharedService:SharedService) { }
+  constructor() { }
+  contactForm = new FormGroup({
+    name: new FormControl('', Validators.required),
+    company: new FormControl(''),
+    subject: new FormControl('', Validators.required),
+    email: new FormControl('', [Validators.email]),
+    description: new FormControl('', [Validators.required, Validators.minLength(1)]),
+  })
 
+  onSubmit(){
+    if(!this.contactForm.invalid){
+      console.log(this.contactForm.value)
+    }
+  }
   ngOnInit(): void {
-    this.sharedService.emitOpt("contact")
   }
 
 }

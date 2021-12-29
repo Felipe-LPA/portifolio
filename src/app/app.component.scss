@@ -3,15 +3,15 @@
 $breakpoints: (
   // xm: 360px,
   sm: 576px,
-  // md: 768px,
-  // lg: 992px,
+  md: 768px,
+  lg: 992px,
   // xl: 1200px,
   // xxl: 1400px
 );
 
 // Variables
 $base-color: rgb(93, 50, 178);
-$base-color-alpha: rgba(182, 88, 245, 0.2);
+$base-color-alpha: #f0ddfd;
 
 // configurações gerais
 
@@ -27,7 +27,7 @@ nav {
   background-color: $base-color-alpha;
   display: flex;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
 
   .container {
     display: flex;
@@ -75,15 +75,12 @@ nav {
       li:hover a,
       li.active {
         font-weight: bold;
-        // border-bottom: 2px solid $base-color;
       }
     }
     fa-icon{
       font-size: 2em;
       cursor: pointer;
       color: $base-color;
-      // position: absolute;
-      // right: 0;
     }
   }
 }
@@ -91,13 +88,21 @@ main {
   display: flex;
   justify-content: center;
   margin-bottom: 10vh;
-  background-color: rgba(182, 88, 245, 0.1);
+  @include media(">=sm") {
+    font-size: 1rem;
+  }
+  @include media(">=md") {
+    font-size: 1.3rem;
+  }
+  @include media(">=lg") {
+    font-size: 1.8rem;
+  }
 }
 footer {
   position: absolute;
   bottom: 0;
   background-color: $base-color;
-  min-width: 100vw;
+  min-width: 100%;
   display: flex;
   justify-content: center;
   height: 10vh;

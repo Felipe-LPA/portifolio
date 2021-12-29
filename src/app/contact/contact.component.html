@@ -1,2 +1,21 @@
-<p>contact works!</p>
+<!-- <h1>CONTATO</h1> -->
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" id="formtest">
+  <label for="name">nome</label>
+  <input type="text" name="name" id="name" formControlName="name" />
+  <label for="company">empresa</label>
+  <input type="text" name="company" id="company" formControlName="company" />
+  <label for="subject">assunto</label>
+  <input type="text" name="subject" id="subject" formControlName="subject" />
+  <label for="email">email</label>
+  <input type="email" name="email" id="email" formControlName="email" />
+  <label for="description">descrição</label>
+  <textarea
+    name="description"
+    id="description"
+    cols="30"
+    rows="5"
+    formControlName="description"
+  ></textarea>
 
+  <button [disabled]='contactForm.invalid' type="submit">Enviar</button>
+</form>
