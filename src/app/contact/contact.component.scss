@@ -25,9 +25,9 @@ form#formtest{
     // background-color: #f0ddfd;
     background-color: #bbb;
     color: #f0ddfd;
-    cursor: pointer;
   }
-  button:hover:not(:disable){
+  button:hover:not(button:disabled){
+    cursor: pointer;
     box-shadow: 0.1rem 0.1rem 0.5rem 0 rgb(0, 0, 0, 0.4);
     transition: box-shadow 0.2s ease-in-out;
   }
