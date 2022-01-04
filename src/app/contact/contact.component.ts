@@ -17,12 +17,15 @@ export class ContactComponent implements OnInit {
     description: new FormControl('', [Validators.required, Validators.minLength(1)]),
   })
 
+  // teste = this.contactFor
+
   onSubmit(){
     if(!this.contactForm.invalid){
       console.log(this.contactForm.value)
     }
   }
   ngOnInit(): void {
+    console.log(this.contactForm)
   }
 
 }

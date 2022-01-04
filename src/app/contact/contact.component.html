@@ -1,21 +1,28 @@
 <!-- <h1>CONTATO</h1> -->
+<h1>AINDA NÃO FUNCIONAL</h1>
+
 <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" id="formtest">
-  <label for="name">nome</label>
-  <input type="text" name="name" id="name" formControlName="name" />
+  <h2>* Campos obrigatórios</h2>
+  <label for="name">nome*</label>
+  <input type="text" name="name" id="name" formControlName="name"/>
+  <p>Campo obrigatório</p>
   <label for="company">empresa</label>
   <input type="text" name="company" id="company" formControlName="company" />
-  <label for="subject">assunto</label>
+  <label for="subject">assunto*</label>
   <input type="text" name="subject" id="subject" formControlName="subject" />
+  <p>Campo obrigatório</p>
   <label for="email">email</label>
   <input type="email" name="email" id="email" formControlName="email" />
-  <label for="description">descrição</label>
+  <p>formato de email(ex: teste@teste)</p>
+  <label for="description">descrição*</label>
   <textarea
     name="description"
     id="description"
     cols="30"
-    rows="5"
+    rows="3"
     formControlName="description"
   ></textarea>
+  <p>Campo obrigatório</p>
 
   <button [disabled]='contactForm.invalid' type="submit">Enviar</button>
 </form>
