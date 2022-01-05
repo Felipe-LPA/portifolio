@@ -75,7 +75,6 @@ ul.card{
         justify-content: end;
         gap: 0.6em;
         visibility:hidden;
-        // transition: visibility 2s;
         a{
           background-color: $base-color-alpha;
           color: $base-color-alpha;
@@ -95,9 +94,6 @@ ul.card{
 
 ul.card:hover li:last-child>div div.links{
     visibility: visible;
-    // transition-property: visibility;
-    // transition-delay: 250ms;
-    // transform-style: ease;
     a{
       background-color: $base-color;
       color: #fff;
