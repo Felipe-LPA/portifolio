@@ -1,1 +1,22 @@
-<p>cards works!</p>
+<ul class="card">
+  <li>
+    <div class="banner">
+      <img src="{{card.banner.url}}" alt="{{card.banner.alt}}">
+    </div>
+  </li>
+  <li>
+    <div>
+      <h2>{{card.title}}</h2>
+      <p>{{card.description}}</p>
+      <ul>
+        <li *ngFor="let technology of card.technologies">
+          <a>{{technology}}</a>
+        </li>
+      </ul>
+      <div class="links">
+        <a href="{{card.linkGitHub}}" class="github">GITHUB</a>
+        <a *ngIf="card.site" href="{{card.site}}">SITE</a>
+      </div>
+    </div>
+  </li>
+</ul>

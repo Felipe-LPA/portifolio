@@ -8,7 +8,7 @@ import { CardsComponent } from './cards/cards.component';
 @NgModule({
   declarations: [
     SitesComponent,
-    CardsComponent
+    CardsComponent,
   ],
   imports: [
     CommonModule

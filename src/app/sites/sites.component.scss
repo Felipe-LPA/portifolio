@@ -1,0 +1,10 @@
+
+
+ul{
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  li:not(:last-child){
+      border-bottom: 1px solid #ddd;
+  }
+}

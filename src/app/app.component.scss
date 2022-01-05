@@ -88,6 +88,7 @@ main {
   display: flex;
   justify-content: center;
   margin-bottom: 10vh;
+  padding-top: 5vh;
   @include media(">=sm") {
     font-size: 1rem;
   }

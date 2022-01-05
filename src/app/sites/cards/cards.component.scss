@@ -1,0 +1,106 @@
+@import "~include-media";
+
+$base-color: rgb(93, 50, 178);
+$base-color-alpha: #f0ddfd;
+
+$breakpoints: (
+  xm: 360px,
+  sm: 576px,
+  // md: 768px,
+  // lg: 992px,
+  // xl: 1200px,
+  // xxl: 1400px
+);
+a{
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+a:hover{
+  opacity: .5;
+}
+ul.card{
+  display: flex;
+  gap: 1em;
+  width: 100%;
+  padding-bottom: 1em;
+  box-sizing: border-box;
+  @include media('<=sm'){
+    flex-direction: column;
+  }
+  li{
+    display: flex;
+    align-items: center;
+  }
+  li:first-child{
+    div.banner{
+      width: 10em;
+      display: flex;
+      @include media('<=sm'){
+        width: 100%;
+      }
+      img{
+        border-radius: 0.2em;
+        height: 100%;
+      }
+    }
+  }
+  li:last-child{
+    flex-grow: 1;
+    >div{
+      @include media('<=sm'){
+        font-size: 1.5em;
+        gap: 0.5em;
+      }
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 0.2em;
+      justify-content: space-between;
+      height: 100%;
+      h2{
+        font-size: 0.8em;
+      }
+      p{
+        font-size: 0.6em;
+      }
+      ul{
+        font-size: .4em;
+        display: flex;
+        gap: .5em;
+      }
+      div.links{
+        font-size: 0.6em;
+        display: flex;
+        justify-content: end;
+        gap: 0.6em;
+        visibility:hidden;
+        // transition: visibility 2s;
+        a{
+          background-color: $base-color-alpha;
+          color: $base-color-alpha;
+          padding: 0.3em;
+          border-radius: 0.15em;
+          @include media('<=sm'){
+            background-color: $base-color;
+            color: #fff;
+            visibility: visible;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+ul.card:hover li:last-child>div div.links{
+    visibility: visible;
+    // transition-property: visibility;
+    // transition-delay: 250ms;
+    // transform-style: ease;
+    a{
+      background-color: $base-color;
+      color: #fff;
+      transition: background-color 1s, color 1s;
+    }
+}

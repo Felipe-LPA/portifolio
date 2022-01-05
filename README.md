@@ -11,10 +11,12 @@ ideias para dps:
 background do container será dinamico de acordo com o hover do card do app.
 
 lembretes:
-criar componentes apps{sites}, about e contact 
-sites: img(thumb, title, link github, description)
+  colocar filtro de tecnologias no sites
+  criar versão em inglês do site
+  criar scss na pasta shared para compartilhar as variaveis
 
-
+refatoração:
+  mobile first
 
 ideia para app portifolio:
 

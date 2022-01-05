@@ -1,1 +1,6 @@
-<h1>sites</h1>
+
+<ul>
+  <li *ngFor="let card of cards">
+    <app-cards [card]="card"> </app-cards>
+  </li>
+</ul>
