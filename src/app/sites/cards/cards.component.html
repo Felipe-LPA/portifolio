@@ -10,7 +10,7 @@
       <p>{{card.description}}</p>
       <ul>
         <li *ngFor="let technology of card.technologies">
-          <a>{{technology}}</a>
+          <button (click)="addFilter(technology)">{{technology}}</button>
         </li>
       </ul>
       <div class="links">

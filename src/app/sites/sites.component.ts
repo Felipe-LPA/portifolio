@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SitesComponent implements OnInit {
   constructor() {}
+  technologyFilter: string[] = ['algo', 'outro algo', 'um terceiro algo'];
   cards: Card[] = [
     {
       background:
@@ -21,7 +22,7 @@ export class SitesComponent implements OnInit {
         'Projeto proposto pelo professor referente ao modulo4(front end web api)',
       technologies: ['JavaScript', 'Html', 'Css'],
       linkGitHub: 'https://github.com/Felipe-LPA/ProjetoFinalModulo4',
-      site: 'https://objective-brattain-3bab86.netlify.app/'
+      site: 'https://objective-brattain-3bab86.netlify.app/',
     },
     {
       background:
@@ -38,5 +39,14 @@ export class SitesComponent implements OnInit {
     },
   ];
 
+  addFilter(filter: string) {
+    if(!this.technologyFilter.includes(filter))
+    this.technologyFilter.push(filter);
+  }
+  removeFilter(filterRemoved: string) {
+    this.technologyFilter = this.technologyFilter.filter(
+      (filter) => filter != filterRemoved
+    );
+  }
   ngOnInit(): void {}
 }

@@ -11,14 +11,15 @@ $breakpoints: (
   // xl: 1200px,
   // xxl: 1400px
 );
-a{
+:is(a, button){
   cursor: pointer;
   text-decoration: none;
   color: inherit;
 }
-a:hover{
+:is(a, button):hover{
   opacity: .5;
 }
+
 ul.card{
   display: flex;
   gap: 1em;
@@ -68,6 +69,10 @@ ul.card{
         font-size: .4em;
         display: flex;
         gap: .5em;
+        button{
+          border: none;
+          background: none;
+        }
       }
       div.links{
         font-size: 0.6em;

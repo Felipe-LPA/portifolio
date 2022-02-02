@@ -1,6 +1,10 @@
-
+<ul>
+  <li *ngFor="let filter of technologyFilter">
+    <button (click)="removeFilter(filter)">{{filter}} <span>x</span></button>
+  </li>
+</ul>
 <ul>
   <li *ngFor="let card of cards">
-    <app-cards [card]="card"> </app-cards>
+    <app-cards [card]="card" (filter)="addFilter($event)"> </app-cards>
   </li>
 </ul>

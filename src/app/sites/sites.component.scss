@@ -1,10 +1,44 @@
+@import "~include-media";
 
+// $base-color: rgb(93, 50, 178);
+$base-color-alpha: #f0ddfd;
 
-ul{
+$breakpoints: (
+  // xm: 360px,
+  sm: 576px,
+  // md: 768px,
+  // lg: 992px,
+  // xl: 1200px,
+  // xxl: 1400px
+);
+
+ul:first-child {
+  display: flex;
+  gap: 0.2em;
+  button {
+    gap: 0.2em;
+    display: flex;
+    align-items: center;
+    border: none;
+    font-size: 0.5em;
+    background: none;
+    @include media('<=sm'){
+      font-size: 0.8em;
+    }
+    span{
+      font-size: 0.7em;
+      border-radius: 50%;
+      background: $base-color-alpha;
+      padding: 0.1em 0.3em;
+    }
+  }
+  margin-bottom: 0.5em;
+}
+ul:last-child {
   display: flex;
   gap: 1em;
   flex-direction: column;
-  li:not(:last-child){
-      border-bottom: 1px solid #ddd;
+  li:not(:last-child) {
+    border-bottom: 1px solid #ddd;
   }
 }
